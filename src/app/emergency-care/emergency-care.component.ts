@@ -14,6 +14,6 @@ export class EmergencyCareComponent {
 
   chatService()
   {
-    this.route.navigate([`/CustomerSupport/${1}`]);
+    this.route.navigate([`/CustomerSupport/`]);
   }
 }
