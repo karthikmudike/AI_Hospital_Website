@@ -24,13 +24,11 @@ export class HeaderComponent{
   logInn()
   {
       this.route.navigate([`/login`]);
-      this.toggleUp();
   }
 
   logOut()
   {
       this.basicAuth.loggedOut();
-      this.toggleUp();
   }
 
     toggleMenu() {
