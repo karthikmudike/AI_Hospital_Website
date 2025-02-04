@@ -28,7 +28,7 @@ export const routes: Routes = [
     { path: "findadoctor", component: FindaDoctorComponent, canActivate: [RoutGaurdService] },
     { path: "BillPayment", component: BillPaymentComponent, canActivate: [RoutGaurdService] },
     { path: "Admin", component: AdminPageComponent, canActivate: [RoutGaurdService] },
-    {path: "ContactUs", component: ContactUsComponent},
+    { path: "ContactUs", component: ContactUsComponent, canActivate: [RoutGaurdService]},
     { path: "EmergencyCare", component: EmergencyCareComponent },
     { path: "CustomerSupport", component: CustomerCareComponent },
     { path: "ChatAI", component: MedicalChatAIComponent, canActivate: [RoutGaurdService] },

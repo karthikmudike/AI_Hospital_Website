@@ -32,7 +32,7 @@
         <li><a class="nav-link" [routerLink]="['/appointments']" (click)="toggleUp()">Appointment</a></li>
         <li><a class="nav-link"  [routerLink]="['/ContactUs']" (click)="toggleUp()">Contact</a></li>
         <li><a class="nav-link"  [routerLink]="['/Admin']" *ngIf="this.admin" (click)="toggleUp()">Admin</a></li>
-        <li><a class="nav-link"  *ngIf="!this.basicAuth.isUserLoggedIn()" (click)="this.logInn()">LogInn</a></li>
+        <li><a class="nav-link"  *ngIf="!this.basicAuth.isUserLoggedIn()" (click)="this.logInn()">Login</a></li>
         <li><a class="nav-link"  *ngIf="this.basicAuth.isUserLoggedIn()"(click)="this.logOut()">LogOut</a></li>
       </div>
 

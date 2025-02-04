@@ -13,7 +13,7 @@
   <p class="alert-success text-center p-1">Mean while you can have a game here => <a href="https://karthikmudike.github.io/Frog_Game/" target="_blank">Click Here</a></p>
     <div class="d-flex loginContainer shadow-lg p-3">
       <form class="form" (ngSubmit)="basicLogInn(username,password)">
-        <p class="text-center display-4" style="color: blueviolet;">Loginn</p>
+        <p class="text-center display-4" style="color: blueviolet;">Login</p>
         <br>
         <div class="row justify-content-center">
           <h6 *ngIf="!message" class="alert alert-warning">Invaild Credentials</h6>
@@ -33,10 +33,10 @@
         </div>
         <br>
         <div class="text-center">
-          <button (click)="basicLogInn(username,password)" class="btn btn-success mx-1">Log Inn</button>
+          <button (click)="basicLogInn(username,password)" class="btn btn-success mx-1">Login</button>
           <p class="m-1">or</p>
           <button (click)="basicLogInn_Guest()" class="btn mx-1"
-          style=" background-color: blueviolet; color: white;">LogInn as Guest</button>
+          style=" background-color: blueviolet; color: white;">Login as Guest</button>
         </div>
       </form>
     </div>

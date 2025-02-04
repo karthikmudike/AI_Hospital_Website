@@ -18,7 +18,7 @@ export class MedicalChatAIComponent {
   constructor(private chatService: ChatService) { }
 
   sendMessage(): void {
-    const output = "Medicine or Medicine Brand Name : "+this.userInput.trim()+" give me one line information about this medicine or medicine brand, if exist, if not exist reply with saying 'No medicine with this name, Thank You'."
+    const output = "Medicine or Medicine Brand Name or Dsease Name : "+this.userInput.trim()+" give me one line information about this medicine or medicine brand or medicine used for this disease, if exist, if not exist reply with saying 'No medicine with this name, Thank You'."
     if (output) {
       this.messages.push({ role: 'user', content: this.userInput.trim() });
       this.chatService.sendMessage(output).subscribe(response => {
