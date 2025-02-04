@@ -1,0 +1,125 @@
+
+a{
+    color: white;
+    transition: all 0.3 ease-in-out;
+}
+
+a:hover{
+    color:lightgrey;
+}
+
+.headerColor
+{
+    background-color: blueviolet;
+    
+}
+
+#logOut-menu, #logIn-menu
+{
+  display: flex;
+}
+
+
+#hamburger-nav {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    display: inline-block;
+  }
+  
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+  }
+  
+  .hamburger-icon span {
+    width: 95%;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu-links {
+    position: absolute;
+    z-index: 9999;
+    margin-top: 10px;
+    margin-right: 20px;
+    top: 100%;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0.25rem;
+  }
+  
+  .menu-links a {
+    margin: 20px;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: medium;
+    color: blueviolet;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  
+  .menu-links a:hover
+  {
+    color: rgb(0, 0, 0);
+  }
+  
+  .menu-links li {
+    list-style: none;
+  }
+  
+  .menu-links.open {
+    max-height: 400px;
+  }
+  
+  .hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+  }
+  
+  .hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+  }
+  
+  .hamburger-icon span:first-child {
+    transform: none;
+  }
+  
+  .hamburger-icon span:first-child {
+    opacity: 1;
+  }
+  
+  .hamburger-icon span:first-child {
+    transform: none;
+  }
+
+  @media screen and (max-width: 600px) {
+    #hamburger-nav {
+      display: flex;
+    }
+
+    .headerPage
+    {
+      padding: 10px;
+    }
+        
+    #logOut-menu, #logIn-menu
+    {
+      display: none;
+    }
+  }

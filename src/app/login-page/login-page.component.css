@@ -1,0 +1,19 @@
+.bodyPage
+{
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(217, 201, 232);
+}
+
+.loginContainer
+{
+    margin: 30px;
+    padding: 20px;
+    width: 370px;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+    
+}

@@ -1,0 +1,55 @@
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.imageHover {
+    background-color: rgb(159, 115, 200);
+    margin: 1%;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imageHover:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+a{
+    margin: 10px;
+}
+
+p{
+    color: #f5f5f5;
+    margin: 0;
+}
+
+.card-text
+{
+    font-size: small;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .container {
+        gap: 30px;
+    }
+
+}

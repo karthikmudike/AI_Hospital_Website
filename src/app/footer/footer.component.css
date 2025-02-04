@@ -1,0 +1,26 @@
+.headerColor
+{
+    background-color: blueviolet;
+    font-size: small;
+}
+
+.footerS1
+{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+
+#footerpage
+{
+    font-size: 5px;
+}
+.footerS
+{display: none;}
+.footerS1
+{
+    display: flex;
+}
+
+
+}

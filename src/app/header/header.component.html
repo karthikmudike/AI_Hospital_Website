@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg headerColor p-1" style="font-size: medium;">
+    <div class="container-fluid headerPage">
+      <a class="navbar-brand display-4" style="color: white;" [routerLink]="['']">Hospital</a>
+      <div class="navbar" id="mainHeader">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/hospitalService']">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/appointments']">Appointment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  [routerLink]="['/ContactUs']">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="this.admin"  [routerLink]="['/Admin']">Admin</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-flex">
+        <button *ngIf="!this.basicAuth.isUserLoggedIn()" class="btn btn-success" (click)="this.logInn()" id="logIn-menu">Login</button>
+        <button *ngIf="this.basicAuth.isUserLoggedIn()" class="btn btn-danger"(click)="this.basicAuth.loggedOut()" id="logOut-menu">Logout</button>
+      </div>
+
+      <div class="menu-links" id="menu-links1">
+        <li><a class="nav-link" href="">Home</a></li>
+        <li><a class="nav-link" [routerLink]="['/hospitalService']" (click)="toggleUp()">Services</a></li>
+        <li><a class="nav-link" [routerLink]="['/appointments']" (click)="toggleUp()">Appointment</a></li>
+        <li><a class="nav-link"  [routerLink]="['/ContactUs']" (click)="toggleUp()">Contact</a></li>
+        <li><a class="nav-link"  [routerLink]="['/Admin']" *ngIf="this.admin" (click)="toggleUp()">Admin</a></li>
+        <li><a class="nav-link"  *ngIf="!this.basicAuth.isUserLoggedIn()" (click)="this.logInn()">LogInn</a></li>
+        <li><a class="nav-link"  *ngIf="this.basicAuth.isUserLoggedIn()"(click)="this.logOut()">LogOut</a></li>
+      </div>
+
+      <div class="shadow-lg" id="hamburger-nav">
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" (click)="this.toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+
+  </nav>

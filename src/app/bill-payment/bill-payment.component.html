@@ -1,0 +1,59 @@
+<div class="d-flex justify-content-center align-items-center" *ngIf="this.info==null"
+    style="min-height: 100%; flex-direction: column;">
+    <h5 class="display-4 m-3 alert-warning">Please select a patient number</h5>
+    <button class="btn btn-success m-3" (click)="this.home()">Back</button>
+</div>
+
+
+<div class="p-3" style="background-image: url(Images/Doctor2.png);">
+    <div class="d-flex justify-content-center align-items-center display-4 mx-3 mb-3"
+        style="min-height: 100px; color: blueviolet;">
+        <p class="bg-light text-center p-3 rounded"> Bill Payment </p>
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class=" bg-light mx-1 shadow-lg w-50 p-5" style="min-height: 100%; min-width: 400px;">
+            <div class="container p-0">
+                <img class="p-0 mb-3" src="Images/Logo.png" style="width: 100px; height: 100px;">
+                <p class="display-4" style="font-size: x-large;"><b>Hospital</b></p>
+            </div>
+            <p class="col p-0 lead">2456 lindell Blvd, 63001</p>
+            <p class="col p-0 lead">Chicago, IL</p>
+            <div class="lead">
+                <P><b>Name :</b> {{Record.patientName}}</P>
+                <P><b>Patient Id :</b> {{Record.patientId}}</P>
+                <P><b>Email :</b> {{Record.patientEmail}}</P>
+                <p><b>PhoneNumber :</b> {{Record.patientPhoneNumber}}</p>
+                <P><b>Address :</b> {{Record.patientAddress}}, {{Record.patientZipCode}}, {{Record.patientCity}}</P>
+                <u *ngIf="billPayment">
+                    <p class="text-center lead mb-3"><b>RECIPT</b></p>
+                </u>
+                <br>
+                <div class="container">
+                    <p class="alert-success display-4 text-center m-5" *ngIf="!billPayment">Your payment was done, Thank
+                        You!</p>
+                </div>
+                <div class="d-flex justify-content-center" style="min-height: 100px;" *ngIf="billPayment">
+                    <table style=" min-width: 360px; height: 100%;">
+                        <tr>
+                            <th>Bill Number</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                        </tr>
+                        <tr *ngFor="let bill of Bills">
+                            <td>{{bill.billId}}</td>
+                            <td>{{bill.description}}</td>
+                            <td>{{bill.price}}</td>
+                        </tr>
+                        <p class="p-2 m-0"><b class="mr-3">Total :</b> {{this.TotalPrice}} $</p>
+                    </table>
+                </div>
+            </div>
+            <br>
+            <div class="d-flex justify-content-end" *ngIf="billPayment">
+                <button class="btn" style="background-color: blueviolet; color: white;" (click)="setBill()">Pay
+                    Now</button>
+                <button class="btn btn-warning ml-3">Pay Later</button>
+            </div>
+        </div>
+    </div>
+</div>

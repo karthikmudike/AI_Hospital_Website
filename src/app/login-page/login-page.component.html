@@ -1,0 +1,43 @@
+<div class="d-flex bodyPage" style="min-width: 380px; flex-direction: column; min-height: 800px;" >
+  <div>
+    <p class="alert-danger p-3 text-center" style="min-width: 350px; margin: 20px; max-width: 500px;">
+      Click on "Login as Guest." If it takes 
+      longer than usual, it could be due 
+      to the app being deployed on Render 
+      and currently inactive. The initial 
+      request may take up to 5 minutes to process. 
+      Once it's up and running, everything will 
+      function as expected. Thank you for your 
+      patience!</p>
+  </div>
+  <p class="alert-success text-center p-1">Mean while you can have a game here => <a href="https://karthikmudike.github.io/Frog_Game/" target="_blank">Click Here</a></p>
+    <div class="d-flex loginContainer shadow-lg p-3">
+      <form class="form" (ngSubmit)="basicLogInn(username,password)">
+        <p class="text-center display-4" style="color: blueviolet;">Loginn</p>
+        <br>
+        <div class="row justify-content-center">
+          <h6 *ngIf="!message" class="alert alert-warning">Invaild Credentials</h6>
+        </div>
+        <div class="row d-flex">
+          <p>Username: </p>
+        </div>
+        <div class="row d-flex mb-2">
+          <input class="form-control" name="username" [(ngModel)]="username" placeholder="Username" style="width: 250px;" required>
+        </div>
+        <div class="row d-flex">
+          <p>Password: </p>
+        </div>
+        <div class="row d-flex">
+          <input class="form-control col" type="password" name="password" [(ngModel)]="password" placeholder="Password"
+            style="width: 250px;" required>
+        </div>
+        <br>
+        <div class="text-center">
+          <button (click)="basicLogInn(username,password)" class="btn btn-success mx-1">Log Inn</button>
+          <p class="m-1">or</p>
+          <button (click)="basicLogInn_Guest()" class="btn mx-1"
+          style=" background-color: blueviolet; color: white;">LogInn as Guest</button>
+        </div>
+      </form>
+    </div>
+  </div>

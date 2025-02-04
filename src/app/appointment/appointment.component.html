@@ -1,0 +1,116 @@
+<div class="d-flex appointmentContainer">
+    <div class="appointment shadow-lg">
+        <form>
+            <fieldset>
+                <div class="m-3 p-3" style=" height: 100%; flex-wrap: wrap;">
+                    <p class="display-4" style="color: blueviolet; text-align: center;">Doctor Appointment Request Form
+                    </p>
+                    <hr>
+                    <div class="row">
+                        <div class="col"><input type="text" class="form-control" placeholder="First name"
+                                [(ngModel)]="obj1.patientName" name="FirstName"></div>
+                        <div class="col"><input type="text" class="form-control" placeholder="Last name" name="LastName"
+                                [(ngModel)]="obj1.patientName"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Date of Birth :</p><input type="date" class="form-control" style="width: 80%;"
+                                name="DateOfBirth" [(ngModel)]="obj1.patientDOB">
+                        </div>
+                        <div class="col">
+                            <p>Age :</p><input type="number" class="form-control" placeholder="Age" name="Age"
+                                [(ngModel)]="obj1.patientAge">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Gender :</p>
+                            <select class="form-control" style="width: 80%;" [(ngModel)]="obj1.patientGender" name="gender">
+                                <option selected>Please Select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <p>Phone Number :</p><input type="tel" class="form-control" placeholder="(000)-000-0000"
+                                name="PhoneNumber" [(ngModel)]="obj1.patientPhoneNumber">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <P>Email :</P><input type="email" class="form-control" placeholder="Email" name="email"
+                                [(ngModel)]="obj1.patientEmail">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <P>Address :</P><input type="text" class="form-control" placeholder="Address" name="Address"
+                                [(ngModel)]="obj1.patientAddress">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <P>City :</P><input type="text" class="form-control" placeholder="City" name="city"
+                                [(ngModel)]="obj1.patientCity">
+                        </div>
+                        <div class="col">
+                            <P>Zip Code :</P><input type="text" class="form-control" placeholder="ZipCode"
+                                name="zipcode" [(ngModel)]="obj1.patientZipCode">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <P>Have you been to our facility before? </P>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="isBeenHere" id="inlineRadio1"
+                                    value="Yes" [(ngModel)]="obj1.isBeenHere">
+                                <label class="form-check-label" for="inlineRadio1">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="isBeenHere" id="inlineRadio2"
+                                    value="No" [(ngModel)]="obj1.isBeenHere">
+                                <label class="form-check-label" for="inlineRadio2">No</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <P>Reason for appointment :</P><textarea rows="6" class="form-control"
+                                placeholder="Describe here" name="textarea" [(ngModel)]="obj.reason"></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <P>Date of appointment:</P>
+                            <input type="date" class="form-control" style="width: 100%;" name="appointmentdate" [(ngModel)]="obj.appointmentDate">
+                        </div>
+                        <div class="col">
+                            <P>Preffered appointment slot:</P>
+                            <select class="form-control" style="width: 100%;" [(ngModel)]="obj.appointmentSlot" name="appointmentSlot">
+                                <option selected>Please Select</option>
+                                <option value="Morning">Morning</option>
+                                <option value="Afternoon">Afternoon</option>
+                                <option value="Evening">Evening</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class=" d-flex justify-content-center">
+                        <button class="btn" style="background-color: blueviolet; color: white;"
+                            type="submit" (click)="submitTheAppointment()">Submit</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

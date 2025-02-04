@@ -1,0 +1,24 @@
+.webSiteContainer
+{
+    display: flex;
+    flex-direction: column;
+}
+  
+  .itemAppHeader {
+    top: 0;
+  }
+  
+  .itemRouterClass {
+    flex-grow: 1;
+    overflow: auto;
+  }
+  
+  .itemAppFooter {
+    bottom: 0;
+  }
+
+  *
+  {
+    scrollbar-width: none;
+  }
+  

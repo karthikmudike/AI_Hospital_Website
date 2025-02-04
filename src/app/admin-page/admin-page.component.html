@@ -1,0 +1,13 @@
+<div class="m-3">
+
+    <div *ngFor="let x of obj">
+        <div class="box shadow-lg m-3 pl-3">
+            <p><b>Name : </b>{{x.customerName}}</p>
+            <p><b>Email : </b>{{x.email}}</p>
+            <p><b>Phone Number : </b>{{x.phoneNumber}}</p>
+            <p><b>Message : </b>{{x.message}}</p>
+            <button class="btn btn-danger" (click)="delete(x.customerId)">Delete</button>
+        </div>
+    </div>
+     
+</div>

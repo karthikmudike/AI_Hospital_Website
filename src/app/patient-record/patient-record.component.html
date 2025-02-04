@@ -1,0 +1,106 @@
+<div class="d-flex justify-content-center align-items-center" *ngIf="this.info==null" style="min-height: 100%; flex-direction: column;">
+    <h5 class="display-4 m-3 alert-warning">Please select a patient number</h5>
+    <button class="btn btn-success m-3" (click)="this.home()">Back</button>
+</div>
+<div class="d-flex appointmentContainer" *ngIf="this.info">
+    <div class="appointment shadow-lg" >
+        <form >
+            <div class="m-3 p-3" style=" height: 100%; flex-wrap: wrap;">
+                <p class="display-4" style="color: blueviolet; text-align: center;">Medical History</p>
+                <hr>
+                <p class="col p-1 text-center" style="background-color: rgb(169, 100, 234); border-radius: 5px; color: white;">Patient Information</p>
+                <div class="row">
+                    <div class="col"><p><b>First Name : </b>{{obj.patientName}}</p></div>
+                    <div class="col"><p><b>Last Name : </b>{{obj.patientName}}</p></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <p><b>Date of Birth : </b>{{obj.patientDOB}}</p>
+                    </div>
+                    <div class="col">
+                        <p><b>Patient Id : </b>{{obj.patientId}}</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <p><b>Gender : </b>{{obj.patientGender}}</p>
+                    </div>
+                    <div class="col">
+                        <p><b>Age : </b>{{obj.patientAge}}</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <p><b>Email : </b>{{obj.patientEmail}}</p>
+                    </div>
+                    <div class="col">
+                        <p><b>Phone Number : </b>{{obj.patientPhoneNumber}}</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <p><b>Address : </b>{{obj.patientAddress}}</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <p><b>City : </b>{{obj.patientCity}}</p>
+                    </div>
+                    <div class="col">
+                        <p><b>ZipCode : </b>{{obj.patientZipCode}}</p>
+                    </div>
+                </div>
+                <p class="col p-1 text-center" style="background-color: rgb(169, 100, 234); border-radius: 5px; color: white;">Medical History</p>
+                <div class="row">
+                    <div class="col ml-3">
+                        <div *ngFor="let Record of Records; let i = index">
+                            <p><b>{{i + 1}}.</b> {{Record}}</p>  
+                            <br>
+                        </div> 
+                    </div>
+                </div>
+                <p class="col p-1 text-center" style="background-color: rgb(169, 100, 234); border-radius: 5px; color: white;">Doctor Infomration</p>
+                <div class="row">
+                    <div class="col"><p><b>First Name : </b>Dr. {{Doc.doctorFirstName}}</p></div>
+                    <div class="col"><p><b>Last Name : </b>{{Doc.doctorLastName}}</p></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <p><b>Gender : </b>{{Doc.gender}}</p>
+                    </div>
+                    <div class="col">
+                        <p><b>Phone Number : </b>{{Doc.phoneNumber}}</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <p><b>Email : </b>{{Doc.email}}</p>
+                    </div>
+                    <div class="col">
+                        <p><b>Department : </b>{{Doc.department}}</p>
+                    </div>
+                </div>
+                <p class="col p-1 text-center" style="background-color: rgb(169, 100, 234); border-radius: 5px; color: white;">Terms & Conditions</p>
+                <div class="row">
+                    <div class="col" style="text-align: justify;">
+                        <p>Your health information is protected under the federal Health Insurance Portability and Accountability Act (HIPAA).
+                             The hospital may use your health information for treatment, billing, and healthcare operations. 
+                             Under HIPAA, you have the right to request restrictions on how your health information is used or disclosed, particularly for these purposes. 
+                             While the hospital is not required to agree to such restrictions,
+                            it must comply if the request limits disclosures to a health plan for payment or healthcare operations
+                             and pertains to a service or item for which you or someone on your behalf has fully paid out-of-pocket. 
+                             If the hospital agrees to your requested restrictions, it will adhere to the agreement except in certain situations,
+                              such as emergencies where your health information is necessary.</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

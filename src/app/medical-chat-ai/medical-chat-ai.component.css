@@ -1,0 +1,41 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 1em;
+  }
+  
+  .chat-container .user {
+    text-align: right;
+  }
+  
+  .chat-container .assistant {
+    text-align: left;
+  }
+  
+  .loading {
+    text-align: center;
+    margin-top: 1em;
+  }
+
+  input{
+    max-width: 600px;
+    min-height: 50px;
+  }
+
+  @media screen and (max-width: 600px) {
+
+    input
+    {
+      margin: 10px;
+      height: 75px;
+      width: 85%;
+    }
+
+    .input1Class
+    {
+      flex-direction: column;
+    }
+  }

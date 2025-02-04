@@ -1,0 +1,87 @@
+
+<div class="d-flex" style="background-image: url(Images/Service.jpg); background-size:cover; min-height:87vh ; align-items: center; flex-direction: column;" id="imageService">
+    <div *ngIf="this.checkTheLoggin()">
+        <h2 class="alert-warning lead text-center p-1" *ngIf="this.checkThePatientData()" style="min-width: 50vw; margin: 30px;">For better Simulation choose one of the below options</h2>
+        <h2 class="alert-success lead text-center" *ngIf="!this.checkThePatientData()" style="margin: 30px;">Thank you for clicking on Patient {{this.patientNumber}}</h2>
+        <div class="d-flex justify-content-center">
+        <button class="btn btn-success m-3" (click)="assignPatientNumber(1)">Patient 1</button>
+        <button class="btn btn-success m-3" (click)="assignPatientNumber(2)">Patient 2</button>
+        <button class="btn btn-success m-3" (click)="assignPatientNumber(3)">Patient 3</button>
+        </div>
+    </div>
+
+    <div class="container my-3" style="min-height: 80vh;">
+        <div class="card shadow-sm imageHover d-flex">
+            <a  [routerLink]="['/patientRecord']">
+                <img class="rounded" src="Images/Record.png" alt="patient-record">
+            </a>
+            <div class="card-body p-0 pb-1">
+                <p class="card-text">Patient Record</p>
+            </div>
+        </div>
+
+        <div class="card shadow-sm imageHover d-flex">
+            <a [routerLink]="['/findadoctor']">
+                <img class="rounded" src="Images/Doctor1.jpg" alt="FindADoctor">
+            </a>
+            <div class="card-body p-0 pb-1">
+                <p class="card-text">Find a Doctor</p>
+            </div>
+        </div>
+
+        <div class="card shadow-sm imageHover d-flex">
+            <a [routerLink]="['/appointmentList']">
+                <img class="rounded" src="Images/Appointment.jpg" alt="Appointments">
+            </a>
+            <div class="card-body p-0 pb-1">
+                <p class="card-text">Appointments</p>
+            </div>
+        </div>
+
+        <div class="card shadow-sm imageHover d-flex" style="background-color: #FFD700;">
+            <a [routerLink]="['/ChatAI']" (click)="this.getGPTToken()">
+                <img class="rounded" src="Images/Medicine.jpg" alt="Medicine">
+            </a>
+            <div class="card-body p-0 pb-1">
+                <p class="card-text" style="color: black;">AI Medicine info</p>
+            </div>
+        </div>
+
+        <div class="card shadow-sm imageHover d-flex">
+            <a [routerLink]="['/BillPayment']">
+                <img class="rounded" src="Images/Bill.jpg" alt="BillPayment">
+            </a>
+            <div class="card-body p-0 pb-1">
+                <p class="card-text">Bill Payment</p>
+            </div>
+        </div>
+
+        <div class="card shadow-sm imageHover d-flex">
+            <a [routerLink]="['/EmergencyCare']" >
+                <img class="rounded" src="Images/EmergencyCare.jpg" alt="Emergency" style="width: 100px; height: 100px;">
+            </a>
+            <div class="card-body p-0 pb-1">
+                <p class="card-text">Emergency Care</p>
+            </div>
+        </div>
+
+        <div class="card shadow-sm imageHover d-flex">
+            <a [routerLink]="['/CustomerSupport']">
+                <img class="rounded" src="Images/Call.jpg" alt="CustomerSupport">
+            </a>
+            <div class="card-body p-0 pb-1">
+                <p class="card-text">Customer Support</p>
+            </div>
+        </div>
+
+        <div class="card shadow-sm imageHover d-flex">
+            <a [routerLink]="['/ContactUs']">
+                <img class="rounded" src="Images/ContactUs1.jpg" alt="CustomerSupport">
+            </a>
+            <div class="card-body p-0 pb-1">
+                <p class="card-text">Contact Us</p>
+            </div>
+        </div>
+
+    </div>
+</div>

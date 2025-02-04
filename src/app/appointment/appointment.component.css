@@ -1,0 +1,16 @@
+.appointment
+{
+    margin: 50px;
+    background-color:  white;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    min-width: 400px;
+}
+
+.appointmentContainer
+{
+    background-color:  rgb(229, 211, 238);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
