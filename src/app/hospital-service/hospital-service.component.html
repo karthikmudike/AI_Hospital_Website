@@ -1,5 +1,5 @@
 
-<div class="d-flex" style="background-image: url(Images/Service.jpg); background-size:cover; min-height:87vh ; align-items: center; flex-direction: column;" id="imageService">
+<div class="d-flex" style="background-image: url(Images/Service.jpg); background-size:cover; min-height:100vh ; align-items: center; flex-direction: column;" id="imageService">
     <div *ngIf="this.checkTheLoggin()">
         <h2 class="alert-warning lead text-center p-1" *ngIf="this.checkThePatientData()" style="min-width: 50vw; margin: 30px;">For better Simulation choose one of the below options</h2>
         <h2 class="alert-success lead text-center" *ngIf="!this.checkThePatientData()" style="margin: 30px;">Thank you for clicking on Patient {{this.patientNumber}}</h2>

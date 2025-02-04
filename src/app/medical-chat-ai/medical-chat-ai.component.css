@@ -38,4 +38,14 @@
     {
       flex-direction: column;
     }
+
+    .chat-container
+    {
+      min-width: 380;
+    }
+
+    #x
+    {
+      margin: 10px;
+    }
   }
