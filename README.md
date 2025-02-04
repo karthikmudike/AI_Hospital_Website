@@ -1,4 +1,4 @@
-#AI integrated Hospital Website
+AI integrated Hospital Website
 
 This revolutionizes healthcare with an AI-powered hospital management system, designed to provide seamless and efficient medical services at your fingertips. This platform enables patients to:
 
@@ -8,6 +8,6 @@ This revolutionizes healthcare with an AI-powered hospital management system, de
 4.	Access Emergency Services – Quick and responsive emergency support for immediate medical assistance.
 5.	24/7 Customer Support – Dedicated assistance for payment-related queries, hospital relations, and general inquiries.
 
-#AI-Powered Chatbot – Your Virtual Health Assistant
+AI-Powered Chatbot – Your Virtual Health Assistant
 
 This integrated AI chatbot is designed to provide instant and accurate information about medications, their uses, dosages, and potential side effects. This intelligent assistant helps you make informed healthcare decisions, ensuring safer and more effective treatments.
