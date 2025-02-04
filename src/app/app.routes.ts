@@ -30,7 +30,7 @@ export const routes: Routes = [
     { path: "Admin", component: AdminPageComponent, canActivate: [RoutGaurdService] },
     { path: "ContactUs", component: ContactUsComponent, canActivate: [RoutGaurdService]},
     { path: "EmergencyCare", component: EmergencyCareComponent },
-    { path: "CustomerSupport", component: CustomerCareComponent },
+    { path: "CustomerSupport", component: CustomerCareComponent, canActivate: [RoutGaurdService] },
     { path: "ChatAI", component: MedicalChatAIComponent, canActivate: [RoutGaurdService] },
     { path: '**', component: ErrorComponent }
 ];
