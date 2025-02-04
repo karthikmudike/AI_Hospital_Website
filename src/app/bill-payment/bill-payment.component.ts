@@ -14,9 +14,19 @@ export class BillPaymentComponent implements OnInit {
 
   billPayment: any = true;
 
-  setBill() {
+  setBill1() {
     this.billPayment = false;
     this.access.deleteBillPayment(sessionStorage.getItem('PatientNumber')).subscribe();
+  }
+
+  setBill()
+  {
+    this.billPayment = false;
+  }
+   x: any = true;
+  setBill2()
+  {
+    this.x = false;
   }
 
   info: any = sessionStorage.getItem("PatientNumber");

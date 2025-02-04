@@ -1,11 +1,11 @@
 <div class="d-flex justify-content-center align-items-center" *ngIf="this.info==null"
-    style="min-height: 100%; flex-direction: column;">
+    style="min-height: 100vh; min-width: 360px; flex-direction: column;">
     <h5 class="display-4 m-3 alert-warning">Please select a patient number</h5>
     <button class="btn btn-success m-3" (click)="this.home()">Back</button>
 </div>
 
 
-<div class="p-3" style="background-image: url(Images/Doctor2.png);">
+<div class="p-3" style="background-image: url(Images/Doctor2.png);"  *ngIf="this.info!=null">
     <div class="d-flex justify-content-center align-items-center display-4 mx-3 mb-3"
         style="min-height: 100px; color: blueviolet;">
         <p class="bg-light text-center p-3 rounded"> Bill Payment </p>
@@ -29,11 +29,13 @@
                 </u>
                 <br>
                 <div class="container">
-                    <p class="alert-success display-4 text-center m-5" *ngIf="!billPayment">Your payment was done, Thank
+                    <p class="alert-success display-4 text-center bill" style="min-width: 300px;" *ngIf="!billPayment">Your payment was done, Thank
                         You!</p>
+                        <p class="alert-warning display-4 text-center bill mb-3" style="min-width: 300px;" *ngIf="!x">You can pay later, Thank
+                            You!</p>
                 </div>
                 <div class="d-flex justify-content-center" style="min-height: 100px;" *ngIf="billPayment">
-                    <table style=" min-width: 320px; height: 100%;">
+                    <table style=" min-width: 300px; height: 100%;">
                         <tr>
                             <th>Bill Number</th>
                             <th>Description</th>
@@ -44,15 +46,15 @@
                             <td>{{bill.description}}</td>
                             <td>{{bill.price}}</td>
                         </tr>
-                        <p class="p-2 m-0"><b class="mr-3">Total :</b> {{this.TotalPrice}} $</p>
+                        <p class="p-2 m-1"><b class="mr-3">Total :</b> {{this.TotalPrice}} $</p>
                     </table>
                 </div>
             </div>
             <br>
-            <div class="d-flex justify-content-end" *ngIf="billPayment">
+            <div class="d-flex justify-content-end mt-5" *ngIf="billPayment">
                 <button class="btn" style="background-color: blueviolet; color: white;" (click)="setBill()">Pay
                     Now</button>
-                <button class="btn btn-warning ml-3">Pay Later</button>
+                <button class="btn btn-warning ml-3" (click)="setBill2()">Pay Later</button>
             </div>
         </div>
     </div>
